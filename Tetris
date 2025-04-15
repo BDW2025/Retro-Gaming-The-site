@@ -3,9 +3,9 @@
 <head>
   <title>Ben's W.I.P Tetris</title>
   <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   <script src="tetris.js"></script>
   <style>
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   html, body {
     height: 100%;
     margin: 0;
@@ -27,7 +27,7 @@
   #score-container {
     width: 320px;
     background: #1c1c1c;
-    border: 4px solid black;
+    border: 4px black;
     padding: 10px;
     box-sizing: border-box;
     margin-bottom: 12px;
@@ -61,7 +61,6 @@
 <body>
   <canvas width="320" height="640" id="game"></canvas>
   <div id="game-over-message"></div>
-  <div id="scoreboard-container">
   <div id="scoreboard">Score: 0</div>
   <script>
     const canvas = document.getElementById('game');
@@ -99,6 +98,7 @@
     let rAF = null;
     let gameOver = false;
     let count = 0;
+    let dropDistance = 0;
 
     function updateScore(lines) {
       const linePoints = [0, 40, 100, 300, 1200];
@@ -224,7 +224,7 @@
             placeTetromino();
            } else {
            score++;
-           document.getElementById('scoreboard').textcontent = 'Score: ${score}';
+           document.getElementById('scoreboard').textContent = `Score: ${score}`;
           }
         }
 
@@ -250,9 +250,10 @@
       if (e.code === 'Space') 
       {while (isValidMove(tetromino.matrix, tetromino.row + 1, tetromino.col)) {
       tetromino.row++;
-      score++;
+      dropDistance++;
       }
-
+      score += dropDistance * 2;
+      document.getElementById('scoreboard').textContent = `Score: ${score}`;
       placeTetromino();
       }
       if (e.which === 37 || e.which === 39) {
@@ -279,7 +280,7 @@
           return;
         }
         tetromino.row = row;
-        score++;
+        score += 1;
         document.getElementById('scoreboard').textContent = `Score: ${score}`; 
       }
     });
@@ -288,3 +289,4 @@
   </script>
 </body>
 </html>
+
