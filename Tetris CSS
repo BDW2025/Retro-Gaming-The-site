@@ -1,0 +1,8 @@
+button {
+  background-color: #9bbc0f;
+  border: black;
+  color: black;
+  font-size: 48px;
+  font-family: 'VT323', monospace;
+  text-align: center; 
+}
