@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   <script src="tetris.js"></script>
+  <link rel="stylesheet" href="tetris.css"> 
   <style>
   html, body {
     height: 100%;
@@ -36,7 +37,7 @@
 
   #scoreboard {
     font-family: 'VT323', monospace;
-    font-size: 32px;
+    font-size: 48px;
     color: solid black;
   }
   
@@ -62,6 +63,10 @@
   <canvas width="320" height="640" id="game"></canvas>
   <div id="game-over-message"></div>
   <div id="scoreboard">Score: 0</div>
+  <audio controls autoplay loop hidden>
+  <source src="Tetris.mp3" type="audio/mpeg">
+  </audio>
+  <button style="height: 50px; width: 300px" id="restartButton">Restart</button>
   <script>
     const canvas = document.getElementById('game');
     const context = canvas.getContext('2d');
@@ -196,7 +201,7 @@
     gameOver = true;
 
     const messageEl = document.getElementById('game-over-message');
-    messageEl.textContent = 'GAME OVER! Please refresh the page to restart';
+    messageEl.textContent = 'GAME OVER!';
     messageEl.style.display = 'block';
     }
 
@@ -286,7 +291,11 @@
     });
     tetromino = getNextTetromino();
     loop();
+
+    document.getElementById('restartButton').addEventListener('click', function() {
+        window.location.reload();
+    });
   </script>
 </body>
-</html>
+</html> 
 
