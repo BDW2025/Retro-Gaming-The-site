@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   <script src="tetris.js"></script>
   <link rel="stylesheet" href="tetris.css"> 
-  <!--https://www.youtube.com/watch?v=UMuzwuhxatw-->
+  <!--https://www.youtube.com/watch?v=UMuzwuhxatw,I took the code from this and put it into ChatGPT in an attempt to make it smoother and easier to read for myself-->
   <style>
   html, body {
     height: 100%;
