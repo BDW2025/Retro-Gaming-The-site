@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ben's W.I.P Tetris</title>
+  <title>Ben's Retro Tetris</title>
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   <script src="tetris.js"></script>
