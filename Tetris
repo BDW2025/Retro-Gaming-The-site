@@ -3,9 +3,11 @@
 <head>
   <title>Ben's Retro Tetris</title>
   <meta charset="UTF-8">
+  <!--I used Chat-GPT for the font-->
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   <script src="tetris.js"></script>
   <link rel="stylesheet" href="tetris.css"> 
+  <!--https://www.youtube.com/watch?v=UMuzwuhxatw-->
   <style>
   html, body {
     height: 100%;
