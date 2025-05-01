@@ -291,7 +291,7 @@
     });
     tetromino = getNextTetromino();
     loop();
-
+<!--Chat-GPT-->
     document.getElementById('restartButton').addEventListener('click', function() {
         window.location.reload();
     });
