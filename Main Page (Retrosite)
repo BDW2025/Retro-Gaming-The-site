@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+<link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+<link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+<style>
+ font-family: "Press Start 2P";
+  }
+</style> 
+</head>
+<body>
+<p style="text-align: center; font-size:100px;">Welcome to the Retro Gaming Site!<p>
+</body>
+</html>
