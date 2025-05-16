@@ -2,30 +2,34 @@
 <html>
 <head>
  <meta charset="UTF-8">
-<!--Copied from Tetris)
- <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+ <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+ <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
  <link rel="stylesheet" href="snake.css">
  <title>Retro Snake</title>
+<!--https://youtu.be/ZwRxAmXEuyg, Followed a tutorial for the javascript-->
+<!--https://gist.github.com/ZiKT1229/5935a10ce818ea7b851ea85ecf55b4da, I didn’t copy paste anything, just used it to help create my game as reference as I followed the youtube tutorial (Took parts from both but didn’t copy paste the whole thing essentially)--> 
  <style>
 canvas {
 display: block;
 position: absolute;
 border: 5px solid black;
 background-color: #9bbc0f;
-font-family: 'VT323', monospace;
+font-family: "Press Start 2P";
+font size: 48px;
 margin: auto;
 top: 0;
 bottom: 0;
 right: 0;
 left: 0;
 	}
+font-family: "Press Start 2P";
 </style>
 </head>
-<body>
+<body> 
 <p style="text-align: center; font-size:100px;">Retro Snake<p>
 <script>
-<!--https://youtu.be/ZwRxAmXEuyg, Followed a tutorial for the javascript-->
-<!--https://gist.github.com/ZiKT1229/5935a10ce818ea7b851ea85ecf55b4da, Also used this github as a reference--> 
+<!--Used chatgpt for the arrow keys/var-->
 var
 collectSound = new Audio('getitem.mp3'),
 bgMusic = new Audio('snakemusic.mp3'), 
@@ -38,7 +42,6 @@ LEFT  = 0,
 UP    = 1,
 RIGHT = 2,
 DOWN  = 3,
-<!--Used chatgpt for the arrow keys-->
 KEY_LEFT  = 37,
 KEY_UP    = 38,
 KEY_RIGHT = 39,
@@ -55,7 +58,7 @@ grid = {
 	height: null, 
 	_grid: null,  
  
-
+	
 	init: function(d, c, r) {
 		this.width = c;
 		this.height = r;
@@ -136,7 +139,7 @@ function main() {
 	document.body.appendChild(canvas);
  
 	
-	ctx.font = "36px VT323";
+	ctx.font = "48px, Press Start 2P, monospace";
  
 	frames = 0;
 	keystate = {};
@@ -260,9 +263,10 @@ function draw() {
 	ctx.fillRect(x*tw, y*th, tw, th);
 	}
 	}
-<!--Font wasn't working so I used ChatGPT to rewrite this--> 
+
+        <!--Font wasn't working so I used ChatGPT to rewrite this--> 
 	ctx.fillStyle = "#000";
-        ctx.font = "36px VT323";
+        ctx.font = "24px 'Press Start 2P', monospace";
 	ctx.fillText("SCORE: " + score, 10, canvas.height-10);
 }
  
